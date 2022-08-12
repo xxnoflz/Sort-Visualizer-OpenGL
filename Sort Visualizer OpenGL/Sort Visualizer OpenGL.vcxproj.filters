@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer">
+      <UniqueIdentifier>{05fe8e81-046f-4244-a31b-3588731f5c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer\Vendor">
+      <UniqueIdentifier>{c7f92933-486b-48e8-a066-12a478f88c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer\Utilities">
+      <UniqueIdentifier>{8552838d-f15f-4f82-8553-31efd977c125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer\Render">
+      <UniqueIdentifier>{0cedc515-f6e8-4211-bf6d-6d052a1c06a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer\Shaders">
+      <UniqueIdentifier>{cd3e1407-d15d-42fe-8769-ea0bce87615c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sort Visualizer\Objects">
+      <UniqueIdentifier>{bbd20865-d1b1-4c82-8abc-91d6765cb4dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Sort Visualizer.cpp">
+      <Filter>Source Files\Sort Visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Vendor\glad.c">
+      <Filter>Source Files\Sort Visualizer\Vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Utilities\Shader.cpp">
+      <Filter>Source Files\Sort Visualizer\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Utilities\ResourceManager.cpp">
+      <Filter>Source Files\Sort Visualizer\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Render\quadRenderer.cpp">
+      <Filter>Source Files\Sort Visualizer\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Objects\CollumnArrayObject.cpp">
+      <Filter>Source Files\Sort Visualizer\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sort Visualizer\Objects\SortObject.cpp">
+      <Filter>Source Files\Sort Visualizer\Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Sort Visualizer\Sort Visualizer.h">
+      <Filter>Source Files\Sort Visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sort Visualizer\Utilities\Shader.h">
+      <Filter>Source Files\Sort Visualizer\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sort Visualizer\Utilities\ResourceManager.h">
+      <Filter>Source Files\Sort Visualizer\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sort Visualizer\Render\quadRenderer.h">
+      <Filter>Source Files\Sort Visualizer\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sort Visualizer\Objects\CollumnArrayObject.h">
+      <Filter>Source Files\Sort Visualizer\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sort Visualizer\Objects\SortObject.h">
+      <Filter>Source Files\Sort Visualizer\Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\Sort Visualizer\Shaders\quadShader.vert">
+      <Filter>Source Files\Sort Visualizer\Shaders</Filter>
+    </None>
+    <None Include="source\Sort Visualizer\Shaders\quadShader.frag">
+      <Filter>Source Files\Sort Visualizer\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
