@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <sstream>
 #include <fstream>
@@ -13,5 +12,6 @@ public:
 	static Shader& GetShader(const std::string name);
 private:
 	static std::map<std::string, Shader> Shaders;
+
 	ResourceManager();
 };

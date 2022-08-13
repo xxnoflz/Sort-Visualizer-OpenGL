@@ -1,5 +1,4 @@
 #pragma once
-
 #include <vector>
 #include <random>
 
@@ -13,8 +12,13 @@ class CollumnArrayObject {
 public:
 	CollumnArrayObject(uint32_t min_value, uint32_t max_value);
 
-	void DrawCollumns(quadRenderer* qRender, Shader& shader, uint32_t window_width, uint32_t window_height, uint32_t current_object, uint32_t next_object);
-	void DrawCompleteCollumns(quadRenderer* qRender, Shader& shader, uint32_t window_width, uint32_t window_height);
+	void SetRender(quadRenderer* renderer);
+	void SetShader(Shader& shader);
+
+	void DrawCollumns(const quadRenderer* qRender, const Shader& shader, const uint32_t window_width, const uint32_t window_height, const uint32_t current_object, const uint32_t next_object) const;
+	void DrawCollumns(uint32_t window_width, uint32_t window_height, uint32_t current_object, uint32_t next_object) const;
+	void DrawCompleteCollumns(const quadRenderer* qRender, const Shader& shader, const uint32_t window_width, const uint32_t window_height) const;
+	void DrawCompleteCollumns(uint32_t window_width, uint32_t window_height) const;
 
 	std::vector<int>& GetVector();
 private:
@@ -22,6 +26,9 @@ private:
 
 	uint32_t m_max;
 	uint32_t width;
+
+	quadRenderer* qRender;
+	Shader shader;
 
 	void CreateNumbersArray(uint32_t min_value, uint32_t max_value);
 };

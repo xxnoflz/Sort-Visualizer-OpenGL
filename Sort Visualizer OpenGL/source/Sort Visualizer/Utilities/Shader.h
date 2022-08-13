@@ -1,5 +1,4 @@
 #pragma once
-
 #include <glad/glad.h>
 
 #include <glm/glm.hpp>
@@ -8,14 +7,14 @@
 
 class Shader {
 public:
-	Shader();
+	Shader(const std::string& vertexCode = "NULL", const std::string& fragmentCode = "NULL");
 
-	void CreateShader(const std::string& vertexCode, const std::string& fragmentCode);
+	void use() const;
 
-	void use();
-
-	void setMat4(const std::string name, glm::mat4& value);
-	void setVec3(const std::string name, glm::vec3 value);
+	void setMat4(const std::string name, glm::mat4& value) const;
+	void setVec3(const std::string name, glm::vec3 value) const;
 private:
 	GLuint ID;
+
+	void CreateShader(const std::string& vertexCode, const std::string& fragmentCode);
 };

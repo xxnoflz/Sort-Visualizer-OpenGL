@@ -1,5 +1,4 @@
 #pragma once
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "CollumnArrayObject.h"
@@ -7,6 +6,11 @@
 #include <vector>
 
 class SortObject {
+	struct TimeHandler {
+		float currentTime;
+		float lastTime;
+		float deltaTime;
+	};
 public:
 	enum SortType {
 		BUBBLE_SORT,
@@ -16,36 +20,28 @@ public:
 		HEAP_SORT,
 		COMPLETED
 	};
-	struct TimeHandler {
-		float currentTime;
-		float lastTime;
-		float deltaTime;
-	};
 
-	SortObject(SortType type, float speed, GLFWwindow* window, CollumnArrayObject* object, quadRenderer* qRender, Shader& shader);
+	SortObject(SortType type, float speed, CollumnArrayObject* object, GLFWwindow* main_window);
 
 	void UpdateTime();
-	void StartRender();
-	void Render(int32_t window_width, uint32_t window_height, int iter, int next_iter);
-	void EndRender();
+	void StartRender() const;
+	void RenderSort(const int32_t window_width, const uint32_t window_height, const int iter, const int next_iter);
+	void RenderCompletedSort(const int32_t window_width, const uint32_t window_height) const;
+	void EndRender() const;
 
 	void Start(uint32_t window_width, uint32_t window_height);
 private:
 	SortType type;
 	float speed;
-
-	GLFWwindow* window;
 	CollumnArrayObject* object;
-	quadRenderer* qRender; 
-	Shader shader;
-
+	GLFWwindow* window;
 	TimeHandler time;
 
-	void BubbleSort(uint32_t window_width, uint32_t window_height);
-	void InsertionSort(uint32_t window_width, uint32_t window_height);
-	void SelectionSort(uint32_t window_width, uint32_t window_height);
-	void MergeSort(int left, int right, uint32_t window_width, uint32_t window_height);
-	void Merge(int left, int mid, int right, uint32_t window_width, uint32_t winodow_height);
-	void HeapSort(uint32_t window_width, uint32_t window_height);
-	void Heapify(int size, int node);
+	void BubbleSort(const uint32_t window_width, const uint32_t window_height);
+	void InsertionSort(const uint32_t window_width, const uint32_t window_height);
+	void SelectionSort(const uint32_t window_width, const uint32_t window_height);
+	void MergeSort(const int left, const int right, const uint32_t window_width, const uint32_t window_height);
+	void Merge(const int left, const int mid, const int right, const uint32_t window_width, const uint32_t winodow_height);
+	void HeapSort(const uint32_t window_width, const uint32_t window_height);
+	void Heapify(const int size, const int node);
 };

@@ -6,6 +6,7 @@ quadRenderer::quadRenderer() : VAO() {
 
 void quadRenderer::Init() {
 	std::vector<float> vertices{
+		//Positions
 		0.0, 0.0,
 		1.0, 0.0,
 		0.0, 1.0,
@@ -30,10 +31,10 @@ void quadRenderer::Init() {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void quadRenderer::Draw(glm::vec2 position, glm::vec2 size, Shader& shader, glm::vec3 color) {
+void quadRenderer::Draw(const glm::vec2 position, const glm::vec2 size, const Shader& shader, const glm::vec3 color) const {
 	shader.use();
 	glm::mat4 model{ glm::mat4(1.0) };
-	model = glm::translate(model, glm::vec3(position, 0.0));
+	model = glm::translate(model, glm::vec3(position, 0.0)); 
 	model = glm::scale(model, glm::vec3(size, 1.0));
 	shader.setMat4("model", model);
 	shader.setVec3("color", color);

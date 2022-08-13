@@ -13,8 +13,7 @@ void ResourceManager::LoadShader(const std::string vertexPath, const std::string
 	fragmentStream << fragmentFile.rdbuf();
 	const std::string fragmentCode{ fragmentStream.str() };
 
-	Shader shader;
-	shader.CreateShader(vertexCode, fragmentCode);
+	Shader shader{ vertexCode, fragmentCode };
 	Shaders[name] = shader;
 }
 

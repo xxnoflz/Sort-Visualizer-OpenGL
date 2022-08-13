@@ -1,5 +1,4 @@
 #pragma once
-
 #include <glad/glad.h>
 
 #include <glm/glm.hpp>
@@ -13,7 +12,7 @@ class quadRenderer {
 public:
 	quadRenderer();
 
-	void Draw(glm::vec2 position, glm::vec2 size, Shader& shader, glm::vec3 color = glm::vec3(1.0));
+	void Draw(const glm::vec2 position, const glm::vec2 size, const Shader& shader, const glm::vec3 color = glm::vec3(1.0)) const;
 private:
 	GLuint VAO;
 
